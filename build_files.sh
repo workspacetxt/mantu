@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 # Run collectstatic without interactive prompt
 echo "Running collectstatic..."
-python3 manage.py collectstatic --no-input
+python3.9 manage.py collectstatic --no-input
 
 # Deactivate the virtual environment
 echo "Deactivating virtual environment..."
