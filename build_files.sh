@@ -4,12 +4,12 @@ set -e  # Exit immediately if a command fails
 
 # Create and activate a virtual environment
 echo "Setting up virtual environment..."
-python3 -m venv myenv
+python3.9 -m venv myenv
 source myenv/bin/activate
 
 # Verify Python version and installed packages
 echo "Python version:"
-python3 --version
+python --version
 
 echo "Installed packages:"
 pip list
