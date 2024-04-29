@@ -14,11 +14,11 @@ python --version
 echo "Installed packages:"
 pip list
 
-# Upgrade pip
+# Upgrade pip to the latest version
 echo "Upgrading pip..."
 pip install --upgrade pip
 
-# Install Python dependencies
+# Install Python dependencies from requirements.txt
 echo "Installing Python dependencies..."
 pip install -r requirements.txt
 
