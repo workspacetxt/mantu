@@ -9,7 +9,7 @@ source myenv/bin/activate
 
 # Verify Python version and installed packages
 echo "Python version:"
-python --version
+python3 --version
 
 echo "Installed packages:"
 pip list
@@ -18,13 +18,13 @@ pip list
 echo "Installing Python dependencies..."
 pip install -r requirements.txt
 
-# Verify Django installation
+# Verify installed packages after requirements installation
 echo "Installed packages after requirements installation:"
 pip list
 
 # Run collectstatic without interactive prompt
 echo "Running collectstatic..."
-python3 manage.py collectstatic --no-input
+python manage.py collectstatic --no-input
 
 # Deactivate the virtual environment
 echo "Deactivating virtual environment..."
