@@ -2,11 +2,8 @@
     "version": 2,
     "builds": [
         {
-            "src": "manage.py",
-            "use": "@vercel/python",
-            "config": {
-                "runtime": "python3.9"
-            }
+            "src": "Pipfile",
+            "use": "@vercel/python"
         },
         {
             "src": "build_files.sh",
