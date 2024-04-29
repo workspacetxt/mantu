@@ -1,17 +1,29 @@
 #!/bin/bash
 
+# Path to your Python interpreter (adjust as needed)
+PYTHON="python3.9"
+
+# Path to your Django project directory
+DJANGO_PROJECT_DIR="dsiplay"
+
+# Path to your requirements.txt file
+REQUIREMENTS_FILE="requirements.txt"
+
 # Create and activate a virtual environment
 echo "Setting up virtual environment..."
-python3 -m venv myenv
+$PYTHON -m venv myenv
 source myenv/bin/activate
 
 # Install Python dependencies
 echo "Installing Python dependencies..."
-pip install -r requirements.txt
+pip install -r $REQUIREMENTS_FILE
+
+# Navigate to the Django project directory
+cd $DJANGO_PROJECT_DIR
 
 # Run collectstatic without interactive prompt
 echo "Running collectstatic..."
-python manage.py collectstatic --no-input
+$PYTHON manage.py collectstatic --no-input
 
 # Deactivate the virtual environment
 echo "Deactivating virtual environment..."
