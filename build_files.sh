@@ -2,29 +2,23 @@
 
 set -e  # Exit immediately if a command fails
 
+# Upgrade pip to the latest version
+echo "Upgrading pip..."
+/vercel/path0/myenv/bin/python3.9 -m pip install --upgrade pip
+
 # Create and activate a virtual environment
 echo "Setting up virtual environment..."
-python3.9 -m venv myenv
+/vercel/path0/myenv/bin/python3.9 -m venv myenv
 source myenv/bin/activate
 
-# Verify Python version and installed packages
-echo "Python version:"
-python --version
-
-echo "Installed packages:"
-pip list
-
-# Install Python dependencies
+# Install Python dependencies from Pipfile
 echo "Installing Python dependencies..."
-pip install -r requirements.txt
-
-# Verify installed packages after requirements installation
-echo "Installed packages after requirements installation:"
-pip list
+/vercel/path0/myenv/bin/python3.9 -m pip install pipenv
+/vercel/path0/myenv/bin/pipenv install --skip-lock --sequential --dev
 
 # Run collectstatic without interactive prompt
 echo "Running collectstatic..."
-python manage.py collectstatic --no-input
+/vercel/path0/myenv/bin/python3.9 manage.py collectstatic --no-input
 
 # Deactivate the virtual environment
 echo "Deactivating virtual environment..."
