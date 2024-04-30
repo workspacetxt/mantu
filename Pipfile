@@ -5,6 +5,3 @@ name = "pypi"
  
 [packages]
 django = "*"
- 
-[requires]
-python_version = "3.9.16"
