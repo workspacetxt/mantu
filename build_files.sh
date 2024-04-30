@@ -2,9 +2,9 @@
 
 set -e  # Exit immediately if a command fails
 
-# Create and activate a virtual environment
+# Create and activate a virtual environment with Python 3.9.10
 echo "Setting up virtual environment..."
-python3.9 -m venv myenv
+python3.9.10 -m venv myenv
 source myenv/bin/activate
 
 # Verify Python version and installed packages
