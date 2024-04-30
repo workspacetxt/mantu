@@ -12,7 +12,7 @@
             "src": "Pipfile",
             "use": "@vercel/python",
             "config": {
-                "runtime": "python3.9.10"
+                "runtime": "python3.9"
             }
         }
     ],
